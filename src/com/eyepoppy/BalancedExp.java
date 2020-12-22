@@ -1,4 +1,6 @@
 package com.eyepoppy;
+import sun.text.normalizer.UCharacter;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Stack;
@@ -7,6 +9,8 @@ public class BalancedExp {
 
     //every time this is called, it will create a new memory block, which is not good.
     private final List<Character> leftBrackets = Arrays.asList('(','<','[','{');
+    private final List<Character> rightBrackets = Arrays.asList(')','>',']','}');
+
 
     public boolean balExp(String input){
         int count = 0;
@@ -35,8 +39,11 @@ public class BalancedExp {
                 }
 
                 char top = stack.pop();
-                System.out.println(top);
-                if(isBracketMatch(c, top)) return false;
+//                System.out.println("top: " + top);
+//                System.out.println("c: " + c);
+                System.out.println("isBracket: " + isBracketMatch(c, top));
+                //if(!isBracketMatch(c, top)) return false;
+                if(isBracketMatch(c, top)) return false;// ! or no ! plus false or true
                 //this condition is hard to understand.  c equal ) and top not equal ( -> return false
 
             }
@@ -54,15 +61,36 @@ public class BalancedExp {
         return leftBrackets.contains(c);
     }
 
-    private boolean isRightBracket(char c){
-        return c == ')'|| c == '>' || c == ']' || c == '}';
+
+    private boolean isRightBracket(char c)
+    {
+        return rightBrackets.contains(c);
     }
 
+//    private boolean isBracketMatch(char right, char left){//alt & enter rename the whole c to left & top to right
+//        // ( < [ {
+//        // ) > ] }
+//        //System.out.println("right: " + rightBrackets.indexOf(right));
+//        //System.out.println("left: " + leftBrackets.indexOf(left));
+//        return leftBrackets.indexOf(left) == rightBrackets.indexOf(right);
+//
+//    }
+
     private boolean isBracketMatch(char left, char right){//alt & enter rename the whole c to left & top to right
-        return      (left == ')' && right != '(')||
-                (left == '>' && right != '<')||
-                (left == ']' && right != '[')||
-                (left == '}' && right != '{');
+//        System.out.println("left: " + left);
+//        System.out.println("right: " + right);
+
+
+        return  (left == ')' && right == '(')||//don't like this kind logical, if return false. Why??
+                (left == '>' && right == '<')||
+                (left == ']' && right == '[')||
+                (left == '}' && right == '{');
+
+//        return  (left == ')' && right != '(')||//don't like this kind logical, if return false. Why??
+//                (left == '>' && right != '<')||
+//                (left == ']' && right != '[')||
+//                (left == '}' && right != '{');
     }
+
 }
 

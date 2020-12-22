@@ -1,0 +1,7 @@
+package com.eyepoppy.state;
+
+public enum ToolType {
+    SELECTION,
+    BRUSH,
+    ERASER
+}

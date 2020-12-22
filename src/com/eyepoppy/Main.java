@@ -19,7 +19,7 @@ public class Main{
 //        String str = "(1 + 2)";//true
 //        String str = "C1 + 2(";//false
 //        String str = "((1 + 2)";
-        String str = "(1 + 2)";
+        String str = "{1 + 2)";
 
         BalancedExp balance = new BalancedExp();
         result = balance.balExp(str);
