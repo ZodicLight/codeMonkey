@@ -43,7 +43,7 @@ public class BalancedExp {
 //                System.out.println("c: " + c);
                 System.out.println("isBracket: " + isBracketMatch(c, top));
                 //if(!isBracketMatch(c, top)) return false;
-                if(isBracketMatch(c, top)) return false;// ! or no ! plus false or true
+                if(!isBracketMatch(c, top)) return false;// ! or no ! plus false or true
                 //this condition is hard to understand.  c equal ) and top not equal ( -> return false
 
             }

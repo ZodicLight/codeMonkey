@@ -17,7 +17,8 @@ public class StringReverser {
             stack.push(c);
         }
 
-        StringBuffer reversed = new StringBuffer();
+        StringBuffer reversed = new StringBuffer();//StringBuffer?
+
         while(!stack.empty()){//remove count valuable
             //System.out.println(stack.pop());//it pop out d & b
             //temp += stack.pop();// += everything create a new string
