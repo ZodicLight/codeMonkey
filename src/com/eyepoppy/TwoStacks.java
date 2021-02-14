@@ -8,6 +8,7 @@ public class TwoStacks {
     private int count1 = 0;// count1 = -2;
     private int count2 = 1;
     private int lastCount1;
+    private int lastCount2;
 
     public TwoStacks(int length){
         stacks = new int[length];
@@ -22,7 +23,9 @@ public class TwoStacks {
     }
 
     public void printLast(){
+        System.out.println(" ");
         System.out.println("lastCount1: " + lastCount1);
+        System.out.println("lastCount2: " + lastCount2);
     }
 
     public void push1(int data){
@@ -40,7 +43,7 @@ public class TwoStacks {
         count1 = count1 + 2;//cause problem for pop1()
 
         lastCount1 = count1-2;
-        System.out.println("LastCount1: " + lastCount1);
+        //System.out.println("LastCount1: " + lastCount1);
     }
 
     public void push2(int data){
@@ -54,6 +57,9 @@ public class TwoStacks {
         stacks[count2] = data;//shot cut
         count2 = count2 + 2;
 
+        lastCount2 = count2-2;//bug here 
+
+        System.out.println("LastCount2: " + lastCount2);
     }
 
     public void pop1(){
@@ -65,6 +71,18 @@ public class TwoStacks {
         stacks[lastCount1] = 0;
         count1 = count1 - 2;
         lastCount1 = lastCount1 -2;
+//        System.out.println("count1 end: " + count1);
+    }
+
+    public void pop2(){
+//        System.out.println("pop: ");
+//        System.out.println("lastCount1: " + lastCount1);
+//        System.out.println("Count1 start: " + count1);
+
+        //System.out.println("pop count1: " + count1);
+        stacks[lastCount2] = 0;
+        count2 = count1 - 2;
+        lastCount2 = lastCount2 -2;
 //        System.out.println("count1 end: " + count1);
     }
 

@@ -22,22 +22,30 @@ public class Main{
         stack.push1(70);//correct return error
 //        stack.push1(80);
 
-//        stack.push2(15);
-//        stack.push2(25);
-//        stack.push2(35);
-//        stack.push2(45);
-//        stack.push2(55);
-//        stack.push2(65);
-
         stack.pop1();
         stack.push1(81);
         stack.pop1();
         stack.pop1();
         stack.push1(82);
+//=============================================
+        stack.push2(15);
+        stack.push2(25);
+        stack.push2(35);
+        stack.push2(45);
+        stack.push2(55);
+        stack.push2(65);//lastCount2 11 correct
+//        stack.push2(75);
+
+        stack.pop2();
+        stack.push2(75);
+//        stack.pop2();
+
+
+
 
         stack.printCount();
-        stack.printLast();
         System.out.println(stack.toString());
+        stack.printLast();
 
 //        StackEx11 numbers = new StackEx11(3);
 //
