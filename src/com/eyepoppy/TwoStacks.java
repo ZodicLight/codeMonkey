@@ -46,6 +46,7 @@ public class TwoStacks {
         //System.out.println("LastCount1: " + lastCount1);
     }
 
+
     public void push2(int data){
         System.out.println("count2: " + count2);
 
@@ -81,9 +82,39 @@ public class TwoStacks {
 
         //System.out.println("pop count1: " + count1);
         stacks[lastCount2] = 0;
-        count2 = count1 - 2;
+        count2 = count2 - 2;
         lastCount2 = lastCount2 -2;
 //        System.out.println("count1 end: " + count1);
+    }
+
+    public boolean isEmpty1(){
+        System.out.println("isEmpty1");
+        System.out.println("count1: " + count1);
+        if (count1 == 0) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public boolean isEmpty2(){
+        System.out.println("isEmpty2");
+        System.out.println("count2: " + count2);
+        if (count2 == 1) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public boolean isFull1(){
+
+        if(stacks.length-1 < count1){
+            return true;
+        }else{
+            return false;
+        }
+
     }
 
 

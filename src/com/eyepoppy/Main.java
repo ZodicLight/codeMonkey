@@ -7,7 +7,7 @@ public class Main{
 
     public static void main(String[] args){
         boolean result;
-        String str = "{1 + 2)";
+        //String str = "{1 + 2)";
         //int[] numbers = new int[4];
         //int[] numbers = {10,20,30};
 
@@ -19,31 +19,33 @@ public class Main{
         stack.push1(40);
         stack.push1(50);
         stack.push1(60);
-        stack.push1(70);//correct return error
+        stack.push1(70);//return full
 //        stack.push1(80);
 
-        stack.pop1();
-        stack.push1(81);
-        stack.pop1();
-        stack.pop1();
-        stack.push1(82);
+
+//        System.out.println(stack.isEmpty1());
+//        stack.pop1();
+//        stack.push1(81);
+//        stack.pop1();
+//        stack.pop1();
+//        stack.push1(82);
 //=============================================
         stack.push2(15);
-        stack.push2(25);
-        stack.push2(35);
-        stack.push2(45);
-        stack.push2(55);
-        stack.push2(65);//lastCount2 11 correct
-//        stack.push2(75);
+//        stack.push2(25);
+//        stack.push2(35);
+//        stack.push2(45);
+//        stack.push2(55);
+//        stack.push2(65);//lastCount2 11 correct
+//        stack.push2(75);//ArrayIndexOutOfBoundsException
 
-        stack.pop2();
-        stack.push2(75);
 //        stack.pop2();
+//        stack.push2(75);
+//        stack.pop2();
+//        stack.pop2();
+//        stack.push2(76);
 
-
-
-
-        stack.printCount();
+//        System.out.println(stack.isEmpty2());
+        //stack.printCount();
         System.out.println(stack.toString());
         stack.printLast();
 
