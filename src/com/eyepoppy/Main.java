@@ -47,6 +47,8 @@ public class Main{
 //        System.out.println(stack.isEmpty2());
         //stack.printCount();
         System.out.println(stack.toString());
+        System.out.println(stack.isFull1());
+
         stack.printLast();
 
 //        StackEx11 numbers = new StackEx11(3);

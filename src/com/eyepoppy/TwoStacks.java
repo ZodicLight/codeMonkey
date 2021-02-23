@@ -108,8 +108,20 @@ public class TwoStacks {
     }
 
     public boolean isFull1(){
+        //mod to find out is it even or odd
+        //length odd,  the last node is index 12, length -1
+        //length even, the last node will be 11, length -2
+        //int result = stacks.length%2;
+        //System.out.println("result: " + result);
 
-        if(stacks.length-1 < count1){
+        if(stacks.length%2 == 0){
+            System.out.println("even");
+        }else{
+            System.out.println("odd");
+        }
+
+        System.out.println("isFull1 count1: " + count1);
+        if(stacks.length-1 == lastCount1){//don't know the length.. length could be odd or even
             return true;
         }else{
             return false;
