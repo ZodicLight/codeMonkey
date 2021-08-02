@@ -111,22 +111,46 @@ public class TwoStacks {
         //mod to find out is it even or odd
         //length odd,  the last node is index 12, length -1
         //length even, the last node will be 11, length -2
-        //int result = stacks.length%2;
         //System.out.println("result: " + result);
 
         if(stacks.length%2 == 0){
+            //System.out.println("even");//len even: Len - 2 is the endindex
+            if(stacks.length-2 == lastCount1){//don't know the length.. length could be odd or even
+                return true;
+            }else{
+                return false;
+            }
+        }else{
+            //System.out.println("odd");//Len odd: Len -1 is the endindex
+            if(stacks.length-1 == lastCount1){//don't know the length.. length could be odd or even
+                return true;
+            }else{
+                return false;
+            }
+        }
+        //important skills to share this problem with other ppl and make it as simple as possible
+    }
+
+    public boolean isFull2(){
+        //mod to find out is it even or odd
+        //length odd,  the last node is index 12, length -2
+        //length even, the last node will be 11, length -1
+
+        if(stacks.length%2==0){
             System.out.println("even");
+            if(stacks.length-1 == lastCount2){
+                return true;
+            }else{
+                return false;
+            }
         }else{
             System.out.println("odd");
+            if(stacks.length-2 == lastCount2){
+                return true;
+            }else{
+                return false;
+            }
         }
-
-        System.out.println("isFull1 count1: " + count1);
-        if(stacks.length-1 == lastCount1){//don't know the length.. length could be odd or even
-            return true;
-        }else{
-            return false;
-        }
-
     }
 
 
